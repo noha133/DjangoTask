@@ -73,3 +73,33 @@ python manage.py runserver
     "key": "bd5188970056063a94afcf859820713f8cab743e",
 }
 ```
+#### GET http://127.0.0.1:8000/products
+* General:
+    - Returns all products.
+* Request Sample: ``` curl http://127.0.0.1:8000/products
+       
+* Response Sample:
+```sh
+[{"id":1,"name":"Shampoo","seller":"Sami","price":"80.00","user":4},{"id":2,"name":"Short","seller":"Sami","price":"54.00","user":8}]
+```
+
+#### POST http://127.0.0.1:8000/products
+* General:
+    - Post product.
+* Request Sample: ``` curl http://127.0.0.1:8000/products
+       {"name":"Shampooll","seller":"Sami","price":"80.00","user":4}
+* Response Sample:
+```sh
+{"message":{"id":5,"name":"Shampooll","seller":"Sami","price":"80.00","user":4}}
+```
+
+#### GET http://127.0.0.1:8000/userproducts/<int:pk>/
+* General:
+    - Get user products .
+* Request Sample: ``` curl http://127.0.0.1:8000/userproducts/4/
+       {"name":"Shampooll","seller":"Sami","price":"80.00","user":4}
+* Response Sample:
+```sh
+[{"id":1,"name":"Shampoo","seller":"Sami","price":"80.00","user":4},{"id":3,"name":"Shampoos","seller":"Sami","price":"80.00","user":4},{"id":4,"name":"Shampooss","seller":"Sami","price":"80.00","user":4},{"id":5,"name":"Shampooll","seller":"Sami","price":"80.00","user":4}]
+```
+
