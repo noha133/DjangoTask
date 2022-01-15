@@ -101,10 +101,10 @@ python manage.py runserver
     - Get user products .
 * Request Sample: ``` curl http://127.0.0.1:8000/userproducts/4/
 ```
-         '{
+         {
             "name":"Shampooll","seller":"Sami","price":"80.00","user":4
-          }' 
-            ```
+          } 
+            
 * Response Sample:
 ```sh
 [{"id":1,"name":"Shampoo","seller":"Sami","price":"80.00","user":4},{"id":3,"name":"Shampoos","seller":"Sami","price":"80.00","user":4},{"id":4,"name":"Shampooss","seller":"Sami","price":"80.00","user":4},{"id":5,"name":"Shampooll","seller":"Sami","price":"80.00","user":4}]
