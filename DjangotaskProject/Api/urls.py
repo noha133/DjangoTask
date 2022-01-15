@@ -8,7 +8,6 @@ from rest_framework.routers import DefaultRouter
 urlpatterns = [
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
-    path('product', views.product_list.as_view()),
-    path('products', views.product_api.as_view()),
+    path('products', views.product_api.as_view()), #get and create products
     path('userproducts/<int:pk>/', views.userproducts.as_view()),
 ]

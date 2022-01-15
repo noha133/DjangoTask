@@ -13,25 +13,17 @@ from rest_framework.permissions import IsAuthenticated
 
 
 
-class product_list(APIView):
-    # def get(self, request, *args,**kwargs):
-    #     product = Product.objects.filter(user_id=request.user.id)
-    #     serialize = productSerializer(instance=pins, many=True)
-    #     print(f"{len(serialize.data)} = ")
-    #     return Response(data=serialize.data, status=status.HTTP_200_OK)
+
+
+
+class product_api(APIView):
+    permission_classes = [IsAuthenticated]
+    #get all products
     def get(self, request, *args, **kwargs):
         product = Product.objects.order_by('price')
         serializer = productSerializer(instance=product, many=True)
         return Response(data=serializer.data, status=status.HTTP_200_OK)
-
-
-class product_api(APIView):
-
-    def get(self, request, *args, **kwargs):
-        product = Product.objects.all()
-        serializer = productSerializer(instance=product, many=True)
-        return Response(data=serializer.data, status=status.HTTP_200_OK)
-
+    #post a product
     def post(self, request, *args, **kwargs):
         # request.data['user_id']=request.user.id
         serializers = productSerializer(data=request.data)
@@ -44,6 +36,7 @@ class product_api(APIView):
 
 
 class userproducts(APIView):
+    permission_classes = [IsAuthenticated]
     def get(self, request, pk, format=None):
         try:
             user = User.objects.get(pk=pk)
