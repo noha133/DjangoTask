@@ -43,27 +43,25 @@ python manage.py runserver
 ## General
 #### POST /dj-rest-auth/registration/
 * General:
-    - Returns Token and user type.
-* Request Sample: ``` curl http://ec2-18-191-113-113.us-east-2.compute.amazonaws.com:8000/dj-rest-auth/registration/ -X POST -H "Content-Type: application/json" -d
+    - Returns Token 
+* Request Sample: ``` curl http://127.0.0.1:8000/dj-rest-auth/registration/
             '{
                 "username": "name",
                 "password1":"Aa123456789",
                 "password2":"Aa123456789",
                 "email":"name@gmail.com",
-                "user_type":"1"
                 }' 
             ```
 * Response Sample:
 ```sh
 {
     "key": "52862e084f56792e2644b1801952a728a75fd8e5",
-    "user_type": 1
 }
 ```
 #### POST /dj-rest-auth/login/
 * General:
     - Returns Token and user type.
-* Request Sample: ``` curl http://ec2-18-191-113-113.us-east-2.compute.amazonaws.com:8000/dj-rest-auth/login/ -X POST -H "Content-Type: application/json" -d
+* Request Sample: ``` curl http://127.0.0.1:8000/dj-rest-auth/registration/
             '{
             "username": "name",
             "password":"Aa123456789"
@@ -73,6 +71,5 @@ python manage.py runserver
 ```sh
 {
     "key": "bd5188970056063a94afcf859820713f8cab743e",
-    "user_type": 2
 }
 ```
