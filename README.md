@@ -60,7 +60,7 @@ python manage.py runserver
 ```
 #### POST /dj-rest-auth/login/
 * General:
-    - Returns Token and user type.
+    - Returns Token .
 * Request Sample: ``` curl http://127.0.0.1:8000/dj-rest-auth/registration/
             '{
             "username": "name",
