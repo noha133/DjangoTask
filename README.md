@@ -100,6 +100,7 @@ python manage.py runserver
 * General:
     - Get user products .
 * Request Sample: ``` curl http://127.0.0.1:8000/userproducts/4/
+```
          '{
             "name":"Shampooll","seller":"Sami","price":"80.00","user":4
           }' 
