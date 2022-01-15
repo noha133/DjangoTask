@@ -78,7 +78,7 @@ python manage.py runserver
 * General:
     - Returns all products.
 * Request Sample: ``` curl http://127.0.0.1:8000/products  
-*  "Authorization: Token <ACCESS_TOKEN>"
+  "Authorization: Token <ACCESS_TOKEN>"
        
 * Response Sample:
 ```sh
@@ -89,7 +89,7 @@ python manage.py runserver
 * General:
     - Post product.
 * Request Sample: ``` curl http://127.0.0.1:8000/products 
-*  "Authorization: Token <ACCESS_TOKEN>"
+  "Authorization: Token <ACCESS_TOKEN>"
 
    
    {"name":"productname","seller":"sellername","price":"80.00","user":userid} 
