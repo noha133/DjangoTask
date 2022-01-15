@@ -45,12 +45,13 @@ python manage.py runserver
 * General:
     - Returns Token 
 * Request Sample: ``` curl http://127.0.0.1:8000/dj-rest-auth/registration/
-            '{
+```sh
+            {
                 "username": "name",
                 "password1":"Aa123456789",
                 "password2":"Aa123456789",
                 "email":"name@gmail.com",
-                }' 
+                }
             ```
 * Response Sample:
 ```sh
