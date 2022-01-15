@@ -88,11 +88,13 @@ python manage.py runserver
     - Post product.
 * Request Sample: ``` curl http://127.0.0.1:8000/products
 
-{"name":"productname","seller":"sellername","price":"80.00","user":userid} 
+   
+   {"name":"productname","seller":"sellername","price":"80.00","user":userid} 
+   
          
 * Response Sample:
 ```sh
-{"message":{"id":5,"name":"Shampooll","seller":"Sami","price":"80.00","user":4}}
+{"message":{"id":5,"name":"productname","seller":"sellername","price":"80.00","user":userid}}
 ```
 
 #### GET http://127.0.0.1:8000/userproducts/<int:pk>/
